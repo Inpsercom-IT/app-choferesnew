@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
+    <link href="styles/overrides.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+
+    <link href="kendo/styles/kendo.default.min.css" rel="stylesheet">
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
+    <link href="styles/theme.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="kendo/styles/w3.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2017.3.913/styles/kendo.common.min.css">
+
+    <script src="cordova.js"></script>
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="app.js"></script>
+
+    <script src="bower_components/pdfmake/build/pdfmake.min.js"></script>
+    <script src='bower_components/pdfmake/build/vfs_fonts.js'></script>
+    <script src="bower_components/print.js/dist/print.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://kendo.cdn.telerik.com/2017.1.118/js/kendo.all.min.js"></script>
+    <script src="dataProviders/jsonProvider.js"></script>
+
+    <style>
+
+        .k-loading-mask .k-loading-image {
+            background-image: url( 'kendo/styles/images/carloading2.gif') !important;
+        }
+
+        div.k-loading-mask {
+            z-index: 3;
+        }
+
+        #tabstrip h2 {
+            font-weight: lighter;
+            font-size: 5em;
+            line-height: 1;
+            padding: 0 0 0 30px;
+            margin: 0;
+        }
+
+            #tabstrip h2 span {
+                background: none;
+                padding-left: 5px;
+                font-size: .3em;
+                vertical-align: top;
+            }
+
+        #tabstrip p {
+            margin: 0;
+            padding: 0;
+        }
+
+        .primary {
+            color: #fff;
+            min-width: 75px;
+        }
+
+        .calend {
+            width: 105px;
+        }
+
+        .textos {
+            width: 95%;
+            border-width: 0;
+        }
+
+        .textos2 {
+            width: 215px;
+        }
+
+        .textos3 {
+            width: 90%;
+            align-content: flex-end;
+        }
+
+        .textos4 {
+            width: 25px;
+        }
+
+        .textos5 {
+            font-size: 12px;
+        }
+
+        .mialtura {
+            height: 30px;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            height: 80vh;
+            justify-content: center;
+        }
+
+        .item {
+            align-self: center;
+        }
+
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+            border: 10px solid #dcdcdc;
+            border-radius: 50%;
+            border-top: 10px solid #3498db;
+            width: 30px;
+            height: 30px;
+        }
+
+        .letra {
+            font-size: large;
+        }
+
+        .clase {
+            padding: 2px;
+        }
+
+        table1,
+        th1,
+        td1 {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th1,
+        td1 {
+            padding: 2px;
+        }
+
+        .form-group1 {
+            margin-bottom: 15px;
+        }
+
+        .container1 {
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .form-horizontal1 .form-group1 {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .select-style {
+            border: 1px solid #ccc;
+            width: 250px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .select-style select {
+                padding: 5px 8px;
+                width: 100%;
+                border: none;
+                box-shadow: none;
+                -webkit-appearance: none;
+       }
+
+       .select-style select:focus {
+                 outline: none;
+        }
+        .k-button {
+            min-width: 25px !important;
+            min-height: 25px !important;
+            padding: 0 !important;
+        }
+
+      
+    </style >
+    </head > <body id="kendoUiMobileApp" > 
+        <script src="components/listaVehiculos/index.js" ></script>
+        <script src="components/login/index.js"></script>  
+        <script src="components/home/index.js"></script>
+        <script src="components/consultaGeneral/index.js"></script>
+        <script src="components/despacharVehiculo/index.js"></script>
+        <script src="components/fotosVideos/index.js"></script>
+        <script src="components/novedades/index.js"></script>
+
+        <div data-role="layout" data-id="main" > 
+            <header data-role="header" > 
+                <div data-role="navbar" > 
+                    <span data-role="view-title" > </span >
+                    <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a> 
+                </div > 
+            </header > 
+        </div>
+                 <div data-role="layout" data-id="main-nonav">
+                     <header data-role="header">
+                         <div data-role="navbar">
+                             <span data-role="view-title"></span>
+                         </div>
+                     </header>
+        </div>
+        <div id="appDrawer" data-role="drawer" data-title="Menu Principal">
+            <header data-role="header">
+                <div data-role="navbar">
+                    <span data-role="view-title"></span>
+                </div>
+            </header>
+            <div id="vwLogin">
+                <div data-bind="visible: isVisible">
+
+                    <ul id="navigation-container" data-role="listview">
+                        <li><a href="components/login/view.html"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;&nbsp;<span class="navigation-link-text">Acceso</span></a></li>
+                    </ul>
+               </div>
+            </div>
+            <div id="vwLogout">
+                <div data-bind="visible: isVisible">
+
+                    <ul id="navigation-container" data-role="listview">
+                        <li>
+
+                            <span class="navigation-link-text">
+                                <label id="iniUsuario" style="font-size: 12px"></label>
+                            </span>
+
+                        </li>
+                    </ul>
+
+                    <ul id="navigation-container" data-role="listview">
+                        <li><a onclick="cerrarSistema();"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;&nbsp;<span id="spnLogout" class="navigation-link-text">Cerrar</span></a></li>
+                    </ul>
+
+                </div>   
+            </div>
+       </div>
+       <div id="notify" class="notify-pop-up">
+            <span class="notify-pop-up__content"></span>
+       </div>
+
+                     <!-- start index html save -->
+                     <!-- end index html save -->
+                     <!-- START_CUSTOM_CODE_kendoUiMobileApp -->
+                     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+                     <!-- END_CUSTOM_CODE_kendoUiMobileApp -->
+</body > 
+</html >
+        

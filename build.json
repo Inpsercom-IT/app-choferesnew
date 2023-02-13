@@ -1,0 +1,11 @@
+{
+     "android": {
+         "release": {
+             "keystore": "C:\\key\\inpsercom.keystore",
+             "storePassword": "q1w2e3r4",
+             "alias": "Inpsercom",
+             "password" : "q1w2e3r4",
+             "keystoreType": ""
+         }
+     }
+ }

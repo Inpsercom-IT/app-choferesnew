@@ -1,0 +1,28 @@
+{
+  "_app": {
+    "navigationMore": "More",
+    "showMoreTitle": "Show More",
+    "qrCodeScan": "Scan"
+  },
+  "home": {
+    "title": "Home View"
+  },
+  "login": {
+    "title": "Acceso"
+  },
+  "listaVehiculo": {
+    "title": "Iniciar Alistamiento"
+  },
+  "consultaG": {
+    "title": "Confirmar Alistamiento"
+  },
+  "despacharVehiculo": {
+    "title": "Entrega Vehículo Chofer"
+  },
+  "fotosVideos": {
+    "title": "Tomar Fotos y Videos"
+  },
+  "novedades": {
+    "title": "Elegir Novedades"
+  }
+}

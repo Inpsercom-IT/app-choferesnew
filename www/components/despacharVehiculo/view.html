@@ -1,0 +1,36 @@
+<div data-role="view" data-title="View" data-layout="main" data-model="app.despacharVehiculo" data-show="app.despacharVehiculo.onShow" data-after-show="app.despacharVehiculo.afterShow" id="despacharVehiculoScreen" class="screen">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.despacharVehiculo.title"></span>
+            <a data-align="right" class="fa fa-reply" href="components/home/view.html" onclick="verMenu('1')" aria-hidden="true" data-role="button"></a>
+        </div>
+    </header>
+    
+    <header data-role="header">
+            <table align="center" cellpadding="0" cellspacing="0" width="300">
+                    <tr height="40px" id="trID" style="display:initial"><br>
+                        <td>
+                            <input class="w3-input w3-border textos2" id="txtVINDV" name="infoPlacasVIN" type="text" placeholder="VIN" style="text-transform:uppercase;" minlength="6" onkeyup="javascript: this.value = this.value.toUpperCase();" value="">
+                        </td>
+                        <td align="center">
+                            <a id="btn_buscar_consultaDV0"  class="w3-btn primary" aria-label="Buscar" onclick="buscarlistasDV(document.getElementById('txtVINDV').value);">
+                                <i id="icn_buscar_consultaDV0" class="fa fa-search" aria-hidden="true"></i> BUSCAR
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+        </header>
+     <table align="center" width="1000px" border="0" cellspacing="0" cellpadding="0" id="tablaOTDetalleDV" style="display:block">
+        <tr>
+            <td>
+                <div id="datoslistaDV" style="font-size:11px; width:1000px"></div>
+            </td>
+        </tr>
+    </table>
+    <div id="dialogMN"></div>
+</div>
+     
+       <!-- START_CUSTOM_CODE_listaentrega -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+        <!-- END_CUSTOM_CODE_listaentrega -->

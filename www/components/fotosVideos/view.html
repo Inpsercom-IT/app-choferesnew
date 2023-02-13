@@ -1,0 +1,48 @@
+<div data-role="view" data-title="View" data-layout="main" data-model="app.fotoVideo" data-show="app.fotoVideo.onShow" data-after-show="app.fotoVideo.afterShow" id="fotoVideoScreen" class="screen">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.fotosVideos.title"></span>
+            <a data-align="right" class="fa fa-reply" href="components/despacharVehiculo/view.html" aria-hidden="true" data-role="button"></a>
+        </div>
+    </header>
+    
+    <header data-role="header">
+        <div id="heaer_lista" style="margin-left: 30px;">
+            <div>
+                <p>
+                    <legend style="min-width:667px;">ARCHIVOS REGISTRADOS</legend>
+
+                </p>
+                <div id="divOTVideosCont"></div>
+
+                <div id="videosOT" style="width:100%"></div>
+                <div id="statusDom"></div>
+
+                <div id="playVideo"></div>
+                <div id="numOT_2"></div>
+
+            </div>
+        </div>
+    </header>
+</div>
+
+
+    <footer data-role="footer">
+        <table width="100%">
+            <tr>
+                <td align="center">
+
+                    <div id="btnGuardaInfo"></div>
+
+                </td>
+            </tr>
+        </table>
+
+    </footer>
+
+
+
+
+    <!-- END_CUSTOM_CODE_lector_barras -->
+</div>

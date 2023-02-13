@@ -1,0 +1,71 @@
+<div data-role="view" data-title="View" data-layout="main" data-model="app.home" data-show="app.home.onShow" data-after-show="app.home.afterShow" id="homeScreen" class="screen">
+    <header data-role="header">
+        <div data-role="navbar" class="header-text">
+
+            <span data-bind="text: strings.home.title"></span>
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+
+        </div>
+    </header>
+    <div class="container">
+        <div class="item">
+            <div id="menuCboAgencia" style="display: block;">
+                <table align="center" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td align="center">
+                            <h1> <b>   <label class="w3-text-red" id="usuEmpresa2"></label> </b> </h1>
+                        </td>
+                    </tr>
+                </table>
+                <div id="cboAgenciaUsu"></div>
+            </div>
+            <!--MENU-->
+            <div id="menuPagInicio" style="display:block;">
+                <label id="iniUsuarioMenu" style="font-size: 12px"></label>
+                <ul id="navigation-container" data-role="listview">
+                    <li>
+                        <a href="components/despacharVehiculo/view.html">
+                            <span class="fa-stack fa-lg">
+                                <!--<i class="fa fa-square-o fa-stack-2x w3-text-red"></i>-->
+                                <i id="icnChoferMenu0" class="fa fa-list-alt fa-stack-1x "></i>
+                            </span>
+                            <span style="font-size:18px">
+                                Entrega Vehículo Chofer
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="navigation-container" data-role="listview">
+                    <li>
+                        <a onclick="verMenu('0')">
+                            <span class="fa-stack fa-lg">
+                                <i id="icnChoferMenu1" class="fa fa-caret-square-o-down fa-stack-1x "></i>
+                            </span>
+                            <span style="font-size:18px">
+                                Seleccionar Agencia&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="navigation-container" data-role="listview">
+                    <li>
+                        <a onclick="cerrarSistema()">
+                            <span class="fa-stack fa-lg">
+                                <i id="icnChoferMenu2" class="fa fa-sign-out fa-stack-1x "></i>
+                            </span>
+                            <span style="font-size:18px">
+                                Cerrar&nbsp;&nbsp;&nbsp;&nbsp;
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+   </div>
+</div>
+<style>
+    .km-listview-link{
+        color: unset !important;
+    }
+</style>
